@@ -1,103 +1,165 @@
+"use client";
+import Footer from "@/components/footer";
+import Menu from "@/components/menu";
+import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function Home() {
+const Main = () => {
+  const router = useRouter();
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <>
+      <Head>
+        <title>Valdecir Transportes</title>
+        <meta name="description" content="We Move Lives" />
+      </Head>
+      <Menu selected_item="inicio" />
+      <div className="max-w-6xl mx-auto bg-white">
+        <div className="main-container">
+          {/* Hero Section with Car */}
+          <section className="hero-section">
+            <img
+              src="/veiculo-01.png"
+              alt="Executive Mercedes"
+              className="hero-image"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </section>
+
+          {/* Key Features */}
+          <section className="key-features">
+            <div className="key-features-title">
+              <h1 className="hero-title">
+                Soluções Exclusivas em <br />
+                Transporte Executivo
+              </h1>
+            </div>
+            <div className="key-features-cards">
+              {[
+                {
+                  icon: (
+                    <img src="icon-clock.svg" className="key-feature-icon" />
+                  ),
+                  title: "Pontualidade e Confiabilidade",
+                  description:
+                    "Garantimos que nossos clientes chegam ao destino no horário e com total profissionalismo.",
+                },
+                {
+                  icon: (
+                    <img src="icon-favorite.svg" className="key-feature-icon" />
+                  ),
+                  title: "Conforto e Exclusividade",
+                  description:
+                    "Oferecemos veículos de alto padrão, proporcionando uma experiência exclusiva.",
+                },
+                {
+                  icon: (
+                    <img src="icon-support.svg" className="key-feature-icon" />
+                  ),
+                  title: "Atendimento Personalizado",
+                  description:
+                    "Atendemos com atenção às necessidades específicas de cada cliente, pessoas e passageiros.",
+                },
+              ].map((feature, index) => (
+                <div key={index} className="key-feature-card">
+                  <div className="key-feature-icon">{feature.icon}</div>
+                  <h3 className="key-feature-title">{feature.title}</h3>
+                  <p className="key-feature-description">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {/* Request Quote Button */}
+            <div className="request-quote">
+              <button
+                className="request-quote-button"
+                onClick={() => {
+                  router.push("/contato");
+                }}
+              >
+                Solicitar Orçamento
+              </button>
+            </div>
+          </section>
+
+          {/* Services */}
+          <section className="services-section">
+            <div className="services-section-title">
+              <h1 className="hero-title">Nossos Serviços</h1>
+            </div>
+            <div className="services-section-cards">
+              {[
+                {
+                  image: "servico-01.png",
+                  title: "Motoristas Treinados",
+                  description:
+                    "Profissionais experientes, bilíngues (se aplicável) com foco no atendimento ao cliente.",
+                },
+                {
+                  image: "servico-02.png",
+                  title: "Veículo Privativo",
+                  description:
+                    "Ideal para quem busca discrição, conforto exclusivo durante viagens ou compromissos.",
+                },
+                {
+                  image: "servico-03.png",
+                  title: "Atendimento 24/7",
+                  description:
+                    "Flexibilidade para atender em qualquer momento, garantindo comodidade total.",
+                },
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className={`service-card ${index % 2 !== 0 ? "reverse" : ""}`}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="service-image"
+                  />
+                  <div className="service-content">
+                    <div className="service-title-container">
+                      <h3 className="service-title">{service.title}</h3>
+                    </div>
+                    <p className="service-description">{service.description}</p>
+                    <Link href="/contato" className="service-link">
+                      Saiba mais
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Tourist Attraction */}
+          <section className="tourist-section">
+            <h2 className="tourist-title">Pontos Turísticos</h2>
+            <div className="tourist-container">
+              <div className="tourist-inner">
+                <Image
+                  src="/arcos-lapa.jpeg"
+                  alt="Arcos da Lapa"
+                  className="tourist-image"
+                  width={500}
+                  height={300}
+                />
+                <div className="tourist-overlay">
+                  <p className="tourist-description">
+                    <Link href="/pontos-turisticos">Arcos da Lapa</Link>
+                  </p>
+                  <p className="tourist-subdescription">
+                    Vida noturna animada e cultural.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <Footer />
+      </div>
+    </>
   );
-}
+};
+
+export default Main;

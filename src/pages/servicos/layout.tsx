@@ -1,6 +1,5 @@
+import "@/app/globals.css";
 import { Metadata } from "next";
-import "./globals.css";
-import "./styles.css";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -13,7 +12,7 @@ import "./styles.css";
 // });
 
 export const metadata: Metadata = {
-  title: "Valdecir Transportes - We Move Lives",
+  title: "Valdecir Transportes - Serviços",
   description: "We Move Lives",
 };
 
@@ -23,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="en">
       <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
