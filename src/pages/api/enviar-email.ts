@@ -33,14 +33,14 @@ export default async function handler(
   const transporter = nodemailer.createTransport({
     service: "Gmail", // Ou outro serviço de e-mail
     auth: {
-      user: "seu-email@gmail.com", // Substitua pelo seu e-mail
-      pass: "sua-senha", // Substitua pela sua senha
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
-    from: email || telefone, // Use o e-mail ou telefone como remetente
-    to: "destinatario@example.com", // Substitua pelo e-mail do destinatário
+    from: process.env.EMAIL_SENDER,
+    to: process.env.EMAIL_RECIPIENT,
     subject: "Nova mensagem do formulário de contato",
     text: `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`,
   };
