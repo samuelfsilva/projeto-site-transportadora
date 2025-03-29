@@ -93,7 +93,7 @@ const Servicos = () => {
             </p>
             <form
               className="contact-form"
-              action="/api/send-email"
+              action="/api/enviar-email"
               method="POST"
             >
               <div className="form-group">
