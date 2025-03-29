@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import "./globals.css";
-import "./styles.css";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",

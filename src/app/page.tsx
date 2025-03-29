@@ -5,6 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import "./styles.css";
 
 const Main = () => {
   const router = useRouter();
@@ -28,8 +29,9 @@ const Main = () => {
 
           {/* Key Features */}
           <section className="key-features">
-            <div className="key-features-title">
-              <h1 className="hero-title">
+            {/* <div className="key-features-title"> */}
+            <div className="section-title">
+              <h1 className="section-title-text">
                 Soluções Exclusivas em <br />
                 Transporte Executivo
               </h1>
@@ -85,7 +87,7 @@ const Main = () => {
 
           {/* Services */}
           <section className="services-section">
-            <div className="services-section-title">
+            <div className="section-title">
               <h1 className="hero-title">Nossos Serviços</h1>
             </div>
             <div className="services-section-cards">

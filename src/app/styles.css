@@ -21,10 +21,10 @@
 
 /* Seção de recursos principais */
 .key-features {
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  padding: 2.5rem;
+  padding: 0 2.5rem 2.5rem;
   background-color: #f3f4f6;
 }
 
