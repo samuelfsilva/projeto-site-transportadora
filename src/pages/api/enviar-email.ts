@@ -42,7 +42,12 @@ export default async function handler(
     from: process.env.EMAIL_SENDER,
     to: process.env.EMAIL_RECIPIENT,
     subject: "Nova mensagem do formulário de contato",
-    text: `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nMensagem: ${mensagem}`,
+    text: `
+      Nome: ${nome}
+      E-mail: ${email.trim() ? email : "Não informado"}
+      Telefone: ${telefone.trim() ? telefone : "Não informado"}
+      Mensagem: ${mensagem.trim() ? mensagem : "Não informado"}
+    `,
   };
 
   try {
