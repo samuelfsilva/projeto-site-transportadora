@@ -1,2 +1,329 @@
 @import "tailwindcss";
 
+/* Container principal da página */
+.main-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* Seção principal do herói */
+.hero-section {
+  position: relative;
+}
+
+/* Imagem de fundo da seção herói */
+.hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Seção de recursos principais */
+.key-features {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  padding: 2.5rem;
+  background-color: #f3f4f6;
+}
+
+/* Título da seção de recursos principais */
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-title-text {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a39655;
+}
+
+/* Descrição da seção */
+.section-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Contêiner para os cartões de recursos principais */
+.key-features-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-left: 20px;
+}
+
+/* Título principal da seção herói */
+.hero-title {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #a39655;
+}
+
+/* Cartão individual de recurso principal */
+.key-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito hover no cartão de recurso principal */
+.key-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícone dentro do cartão de recurso principal */
+.key-feature-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+}
+
+/* Título do cartão de recurso principal */
+.key-feature-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  width: 60%;
+}
+
+/* Descrição do cartão de recurso principal */
+.key-feature-description {
+  color: #4b5563;
+  width: 70%;
+}
+
+/* Seção de solicitação de orçamento */
+.request-quote {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Botão de solicitação de orçamento */
+.request-quote-button {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  font-style: normal;
+  background-color: #a39655;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.5s;
+}
+
+/* Efeito hover no botão de solicitação de orçamento */
+.request-quote-button:hover {
+  background-color: #bbaf71;
+  cursor: pointer;
+}
+
+/* Seção de serviços */
+.services-section {
+  padding: 2.5rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Título da seção de serviços */
+.services-section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contêiner para os cartões de serviços */
+.services-section-cards {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* Cartão individual de serviço */
+.service-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ececea;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Cartão de serviço com estilo reverso */
+.service-card.reverse {
+  flex-direction: row-reverse;
+  background-color: #a39655;
+}
+
+/* Título do serviço no cartão reverso */
+.service-card.reverse .service-title {
+  color: #ffffff;
+}
+
+/* Descrição e link do serviço no cartão reverso */
+.service-card.reverse .service-description, .service-card.reverse .service-link {
+  color: #e5e5e3;
+}
+
+/* Imagem do serviço */
+.service-image {
+  width: 50%;
+  object-fit: cover;
+}
+
+/* Conteúdo do serviço */
+.service-content {
+  padding: 6rem;
+}
+
+/* Título do serviço */
+.service-title {
+  font-family: "Share Bold OSF", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Descrição do serviço */
+.service-description {
+  font-family: 'Roboto', sans-serif;
+  color: #4b5563;
+}
+
+/* Link do serviço */
+.service-link {
+  font-family: 'Roboto', sans-serif;
+  color: #3c3c3c;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Seção de turismo */
+.tourist-section {
+  padding-top: 2.5rem;
+  background-color: #FFF;
+}
+
+/* Título da seção de turismo */
+.tourist-title {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #a39655;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contêiner interno da seção de turismo */
+.tourist-inner {
+  width: 100%;
+  position: relative;
+}
+
+/* Imagem da seção de turismo */
+.tourist-image {
+  width: 100%;
+  height: 540px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Sobreposição na seção de turismo */
+.tourist-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Descrição principal da seção de turismo */
+.tourist-description {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  text-align: left;
+  color: #e2c534;
+  margin: 0;
+}
+
+/* Subdescrição da seção de turismo */
+.tourist-subdescription {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  color: #FFF;
+  margin: 0.5rem 0 0;
+}
+
+/* Contêiner centralizado da seção de turismo */
+.tourist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contêiner do título dos serviços */
+.service-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.values-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+.value-item {
+  text-align: center;
+}
+
+.value-title {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a39655;
+}
+
+.value-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
