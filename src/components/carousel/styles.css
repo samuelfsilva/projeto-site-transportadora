@@ -1,0 +1,153 @@
+/* Seção de turismo */
+.tourist-section {
+  padding-top: 2.5rem;
+  background-color: #FFF;
+}
+
+/* Contêiner interno da seção de turismo */
+.tourist-inner {
+  width: 100%;
+  position: relative;
+}
+
+/* Imagem da seção de turismo */
+.tourist-image {
+  width: 100%;
+  height: 540px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Sobreposição na seção de turismo */
+.tourist-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Descrição principal da seção de turismo */
+.tourist-description {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: left;
+  color: #e2c534;
+  margin: 0;
+}
+
+/* Subdescrição da seção de turismo */
+.tourist-subdescription {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  color: #FFF;
+  margin: 0.5rem 0 0;
+}
+
+/* Contêiner centralizado da seção de turismo */
+.tourist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contêiner principal do carrossel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Botões de navegação do carrossel */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* Slide do carrossel */
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Contêiner interno do item do carrossel */
+.carousel-item-inner {
+  width: 100%;
+  position: relative;
+}
+
+/* Imagem do item do carrossel */
+.carousel-item-image {
+  width: 100%;
+  height: 540px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Sobreposição no item do carrossel */
+.carousel-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* Descrição principal do item do carrossel */
+.carousel-item-description {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: left;
+  color: #e2c534;
+  margin: 0;
+}
+
+/* Subdescrição do item do carrossel */
+.carousel-item-subdescription {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  color: #FFF;
+  margin: 0.5rem 0 0;
+}
