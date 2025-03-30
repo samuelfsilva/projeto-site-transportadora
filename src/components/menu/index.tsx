@@ -16,9 +16,9 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
       {/* Header */}
       <header className="header-tag">
         <div className="logo-tag">
-          <Link href="\">
+          <Link href="/">
             <Image
-              src="logo.svg"
+              src="/images/logo.svg"
               alt="Logo Valdecir Transportes"
               width={100}
               height={50}
@@ -27,7 +27,7 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
         </div>
         <nav className="nav-tag">
           <Link
-            href="\"
+            href="/"
             className={`menu-item ${
               selected_item === "inicio" ? "selected" : ""
             }`}
@@ -36,7 +36,7 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
           </Link>
           <div className="menu-item dropdown">
             <Link
-              href="\servicos"
+              href="/servicos"
               className={`menu-item ${
                 selected_item === "servicos" ? "selected" : ""
               }`}
@@ -45,7 +45,7 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
             </Link>
             <div className="dropdown-content">
               <Link
-                href="\servicos"
+                href="/servicos"
                 className={`submenu-item ${
                   selected_item === "servicos" ? "selected" : ""
                 }`}
@@ -53,7 +53,7 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
                 NOSSOS SERVIÇOS
               </Link>
               <Link
-                href="\pontos-turisticos"
+                href="/pontos-turisticos"
                 className={`submenu-item ${
                   selected_item === "pontos-turisticos" ? "selected" : ""
                 }`}
@@ -63,7 +63,7 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
             </div>
           </div>
           <Link
-            href="\sobre-nos"
+            href="/sobre-nos"
             className={`menu-item ${
               selected_item === "sobre-nos" ? "selected" : ""
             }`}
@@ -71,7 +71,7 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
             SOBRE NÓS
           </Link>
           <Link
-            href="\contato"
+            href="/contato"
             className={`menu-item ${
               selected_item === "contato" ? "selected" : ""
             }`}

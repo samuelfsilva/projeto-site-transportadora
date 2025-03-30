@@ -1,4 +1,3 @@
-import "@/app/globals.css";
 import Carousel from "@/components/carousel";
 import Footer from "@/components/footer";
 import Menu from "@/components/menu";
@@ -39,81 +38,81 @@ const Servicos = () => {
             <Carousel
               items={[
                 {
-                  src: "/pontos-turisticos/arcos-lapa.jpeg",
+                  src: "/images/pontos-turisticos/arcos-lapa.jpeg",
                   link: "#",
                   title: "Lapa e Arcos da Lapa",
                   description: "Vida noturna animada e cultural.",
                 },
                 {
-                  src: "/pontos-turisticos/cristo-redentor.jpg",
+                  src: "/images/pontos-turisticos/cristo-redentor.jpg",
                   link: "#",
                   title: "Cristo Redentor",
                   description:
                     "Uma das 7 maravilhas do mundo moderno, oferece vistas incríveis da cidade.Vida noturna animada e cultural.",
                 },
                 {
-                  src: "/pontos-turisticos/pao-de-acucar.jpg",
+                  src: "/images/pontos-turisticos/pao-de-acucar.jpg",
                   link: "#",
                   title: "Pão de Açúcar",
                   description:
                     "Passeio de bondinho com panoramas espetaculares.",
                 },
                 {
-                  src: "/pontos-turisticos/praia-de-copacabana.jpg",
+                  src: "/images/pontos-turisticos/praia-de-copacabana.jpg",
                   link: "#",
                   title: "Praia de Copacabana e Ipanema",
                   description:
                     "Famosas mundialmente, ideais para curtir o clima carioca.",
                 },
                 {
-                  src: "/pontos-turisticos/parque-lage.png",
+                  src: "/images/pontos-turisticos/parque-lage.png",
                   link: "#",
                   title: "Parque Lage",
                   description:
                     "Perfeito para fotos, com jardins e vista para o Cristo.",
                 },
                 {
-                  src: "/pontos-turisticos/jardim-botanico.jpg",
+                  src: "/images/pontos-turisticos/jardim-botanico.jpg",
                   link: "#",
                   title: "Jardim Botânico",
                   description: "Um passeio tranquilo em meio à natureza.",
                 },
                 {
-                  src: "/pontos-turisticos/pedra-da-gavea.png",
+                  src: "/images/pontos-turisticos/pedra-da-gavea.png",
                   link: "#",
                   title: "Trilha da Pedra da Gávea",
                   description: "Para aventureiros, com uma vista deslumbrante.",
                 },
                 {
-                  src: "/pontos-turisticos/escadaria-selaron.png",
+                  src: "/images/pontos-turisticos/escadaria-selaron.png",
                   link: "#",
                   title: "Escadaria Selarón",
                   description:
                     "Um mosaico de cores e culturas no coração de Santa Teresa. Um ícone de arte urbana, colorida e vibrante.",
                 },
                 {
-                  src: "/pontos-turisticos/museu-do-amanha.png",
+                  src: "/images/pontos-turisticos/museu-do-amanha.png",
                   link: "#",
                   title: "Museu do Amanhã",
                   description:
                     "Um museu de ciências com arquitetura futurista e exposições interativas.",
                 },
                 {
-                  src: "/pontos-turisticos/theatro-municipal.jpg",
+                  src: "/images/pontos-turisticos/theatro-municipal.jpg",
                   link: "#",
                   title: "Theatro Municipal",
                   description:
                     "Um dos mais belos teatros do Brasil, com apresentações de ópera e balé. Um ícone cultural com apresentações e visitas guiadas.",
                 },
                 {
-                  src: "/pontos-turisticos/santa-teresa.png",
+                  src: "/images/pontos-turisticos/santa-teresa.png",
                   link: "#",
                   title: "Santa Teresa",
                   description:
                     "Bairro encantador, repleto de ateliês e restaurantes. Um refúgio boêmio com ruas de paralelepípedos que respiram arte e cultura.",
                 },
                 {
-                  src: "/pontos-turisticos/ilha-grande.jpg",
+                  src: "/images/pontos-turisticos/ilha-grande.jpg",
                   link: "#",
                   title: "Ilha Grande",
                   description:

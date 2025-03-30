@@ -21,9 +21,8 @@
   color: #ffffff;
 }
 
-.key-feature-card {
+.key-feature-item {
   background-color: #ececea;
-  max-height: 30s0px;
   text-align: left;
   border-radius: 0.5rem;
   display: flex;
@@ -31,12 +30,12 @@
 }
 
 /* Cor de fundo para cartões ímpares */
-.key-feature-card:nth-child(odd) {
+.key-feature-item:nth-child(odd) {
   background-color: #ececea;
 }
 
 /* Cor de fundo para cartões pares */
-.key-feature-card:nth-child(even) {
+.key-feature-item:nth-child(even) {
   background-color: #d8d8d5;
 }
 
@@ -69,6 +68,63 @@
 }
 
 .key-feature-description {
+  color: #4b5563;
+}
+
+/* Seção de serviços */
+.service-section {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding-top: 2.5rem;
+}
+
+.service-item {
+  background-color: #ececea;
+  text-align: left;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Cor de fundo para itens ímpares */
+.service-item:nth-child(odd) {
+  background-color: #ececea;
+}
+
+/* Cor de fundo para itens pares */
+.service-item:nth-child(even) {
+  background-color: #d8d8d5;
+}
+
+.service-section-image {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #4b5563;
+}
+
+.service-section-image img {
+  margin-left: 10px;
+  height: 300px;
+  max-width: 400px;
+}
+
+.service-content {
+  padding-left: 9.5rem;
+  padding-right: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.service-title {
+  font-family: "Share-BoldOSF", sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.service-description {
   color: #4b5563;
 }
 

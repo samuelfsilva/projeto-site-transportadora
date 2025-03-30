@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="footer-logo">
             <Link href="/">
               <Image
-                src="logo.svg"
+                src="/images/logo.svg"
                 alt="Valdecir Transportes"
                 width={100}
                 height={50}

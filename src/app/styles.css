@@ -17,6 +17,7 @@
   width: 100%;
   height: 500px;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 /* Seção de recursos principais */
