@@ -2,10 +2,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 interface FormData {
-  nome: string;
+  name: string;
   email: string;
-  telefone: string;
-  mensagem: string;
+  phone: string;
+  details: string;
 }
 
 export default async function handler(
@@ -16,22 +16,25 @@ export default async function handler(
     return res.status(405).json({ message: "Método não permitido." });
   }
 
-  const { nome, email, telefone, mensagem }: FormData = req.body;
+  const { name, email, phone, details }: FormData = req.body;
 
   // Validações no backend
-  if (!nome.trim()) {
+  if (!name.trim()) {
     return res.status(400).json({ message: "O campo 'Nome' é obrigatório." });
   }
 
-  if (!email.trim() && !telefone.trim()) {
+  if (!email.trim() && !phone.trim()) {
     return res.status(400).json({
       message: "Preencha pelo menos um dos campos: 'E-mail' ou 'Telefone'.",
     });
   }
 
-  // Configuração do transporte de e-mail
+  // Configuração do transporte de e-mail usando variáveis de ambiente
   const transporter = nodemailer.createTransport({
-    service: "Gmail", // Ou outro serviço de e-mail
+    service: process.env.EMAIL_SERVICE,
+    host: process.env.EMAIL_HOST,
+    port: parseInt(process.env.EMAIL_PORT || "465", 10),
+    secure: process.env.EMAIL_SECURE === "true", // true para 465, false para outras portas
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -43,14 +46,16 @@ export default async function handler(
     to: process.env.EMAIL_RECIPIENT,
     subject: "Nova mensagem do formulário de contato",
     text: `
-      Nome: ${nome}
+      Nome: ${name.trim()}
       E-mail: ${email.trim() ? email : "Não informado"}
-      Telefone: ${telefone.trim() ? telefone : "Não informado"}
-      Mensagem: ${mensagem.trim() ? mensagem : "Não informado"}
+      Telefone: ${phone.trim() ? phone : "Não informado"}
+      Mensagem: ${details.trim() ? details : "Não informado"}
     `,
   };
 
   try {
+    await transporter.verify(); // Verifica se o transporte está configurado corretamente
+    console.log("Conexão SMTP estabelecida com sucesso");
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "E-mail enviado com sucesso!" });
   } catch (error) {
