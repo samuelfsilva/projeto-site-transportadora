@@ -58,42 +58,42 @@ const Sobre = () => {
             <div className="values-list">
               {[
                 {
-                  image: "/sobre-nos/valores-01.png",
+                  image: "/images/sobre-nos/valores-01.png",
                   alt: "Excelência",
                   title: "Excelência em todos os detalhes : ",
                   description:
                     "Acreditamos que a qualidade está nos mínimos detalhes. Desde a escolha da frota até o atendimento ao cliente, buscamos superar expectativas e oferecer um serviço que represente o mais alto padrão de transporte executivo.",
                 },
                 {
-                  image: "/sobre-nos/valores-02.png",
+                  image: "/images/sobre-nos/valores-02.png",
                   alt: "Personalização",
                   title: "Personalização como prioridade : ",
                   description:
                     "Entendemos que cada cliente é único. Por isso, nossas soluções são moldadas de acordo com suas necessidades específicas, garantindo uma experiência exclusiva e alinhada aos seus objetivos pessoais ou corporativos.",
                 },
                 {
-                  image: "/sobre-nos/valores-03.png",
+                  image: "/images/sobre-nos/valores-03.png",
                   alt: "Segurança",
                   title: "Segurança e confiabilidade acima de tudo : ",
                   description:
                     "Sua tranquilidade é nossa prioridade. Contamos com veículos modernos, rigorosos protocolos de segurança e motoristas altamente treinados para proporcionar uma viagem segura e confiável em qualquer circunstância.",
                 },
                 {
-                  image: "/sobre-nos/valores-04.png",
+                  image: "/images/sobre-nos/valores-04.png",
                   alt: "Conforto",
                   title: "Compromisso com o conforto e o bem-estar : ",
                   description:
                     "Para nós, o transporte vai além do deslocamento físico. Valorizamos o conforto e o bem-estar dos nossos clientes, criando uma atmosfera premium que transforma cada trajeto em um momento de relaxamento e produtividade.",
                 },
                 {
-                  image: "/sobre-nos/valores-05.png",
+                  image: "/images/sobre-nos/valores-05.png",
                   alt: "Inovação",
                   title: "Inovação no atendimento e na tecnologia : ",
                   description:
                     "Estamos constantemente investindo em tecnologia e métodos inovadores para elevar sua experiência. Nossa equipe está sempre atualizada com as melhores práticas do mercado, garantindo um serviço moderno e eficiente.",
                 },
                 {
-                  image: "/sobre-nos/valores-06.png",
+                  image: "/images/sobre-nos/valores-06.png",
                   alt: "Confiança",
                   title:
                     "Relacionamentos baseados em confiança e transparência : ",
