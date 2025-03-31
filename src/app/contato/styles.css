@@ -1,44 +1,44 @@
 @import "tailwindcss";
 
 /* Container principal */
-.container {
+.contato-container {
   max-width: 72rem;
   margin: 0 auto;
   background-color: #ffffff;
 }
 
 /* Conteúdo principal */
-.content {
+.contato-content {
   padding-bottom: 2rem;
 }
 
 /* Hero Section */
-.hero {
+.contato-hero {
   position: relative;
 }
 
-.hero-image {
+.contato-hero-image {
   width: 100%;
-  height: 500px;
+  height: 500px; /* Altura padrão para desktop */
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 /* Features Section */
-.features {
+.contato-features {
   display: grid;
   gap: 2rem;
   padding: 2.5rem;
   background-color: #FFF;
 }
 
-.features-cards {
+.contato-features-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Três colunas no desktop */
   gap: 1rem;
 }
 
-.feature-card {
+.contato-feature-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,33 +50,33 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.feature-card:hover {
+.contato-feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.feature-icon {
+.contato-feature-icon {
   width: 100px;
   height: 100px;
   margin-bottom: 1rem;
 }
 
-.feature-title {
+.contato-feature-title {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.feature-description {
+.contato-feature-description {
   color: #4b5563;
 }
 
 /* Call to Action */
-.cta {
+.contato-cta {
   text-align: center;
   padding: 2rem 0;
 }
 
-.cta-button {
+.contato-cta-button {
   background-color: #a39655;
   color: #ffffff;
   padding: 0.75rem 2rem;
@@ -84,54 +84,137 @@
   transition: background-color 0.5s;
 }
 
-.cta-button:hover {
+.contato-cta-button:hover {
   background-color: #bbaf71;
   cursor: pointer;
 }
 
 /* Services Section */
-.services {
+.contato-services {
   padding-top: 2.5rem;
 }
 
-.services-cards {
+.contato-services-cards {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); /* Três linhas no desktop */
 }
 
-.service-card {
+.contato-service-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Layout padrão para desktop */
   background-color: #ececea;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-.service-card.reverse {
-  flex-direction: row-reverse;
+.contato-service-card.reverse {
+  flex-direction: row-reverse; /* Inverte o layout no desktop */
 }
 
-.service-image {
-  width: 50%;
+.contato-service-image {
+  width: 50%; /* Metade da largura no desktop */
   object-fit: cover;
 }
 
-.service-content {
+.contato-service-content {
   padding: 2rem;
 }
 
-.service-title {
+.contato-service-title {
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-.service-description {
+.contato-service-description {
   color: #4b5563;
 }
 
-.service-link {
+.contato-service-link {
   color: #3c3c3c;
   font-weight: bold;
   text-decoration: none;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .contato-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  /* Features Section */
+  .contato-features {
+    padding: 1.5rem; /* Reduz o padding no mobile */
+    gap: 1rem; /* Reduz o espaçamento entre os itens */
+  }
+
+  .contato-features-cards {
+    grid-template-columns: 1fr; /* Uma coluna no mobile */
+  }
+
+  .contato-feature-card {
+    padding: 2rem 1rem; /* Reduz o padding no mobile */
+  }
+
+  .contato-feature-icon {
+    width: 80px; /* Reduz o tamanho do ícone no mobile */
+    height: 80px;
+  }
+
+  .contato-feature-title {
+    font-size: 1rem; /* Reduz o tamanho da fonte no mobile */
+  }
+
+  .contato-feature-description {
+    font-size: 0.875rem; /* Reduz o tamanho da fonte no mobile */
+  }
+
+  /* Call to Action */
+  .contato-cta {
+    padding: 1rem 0; /* Reduz o padding no mobile */
+  }
+
+  .contato-cta-button {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    padding: 0.5rem 1rem; /* Ajusta o padding interno */
+  }
+
+  /* Services Section */
+  .contato-services {
+    padding: 1.5rem 0; /* Reduz o padding no mobile */
+  }
+
+  .contato-services-cards {
+    grid-template-columns: 1fr; /* Uma coluna no mobile */
+    gap: 1rem; /* Adiciona espaçamento entre os cartões */
+  }
+
+  .contato-service-card {
+    flex-direction: column; /* Alinha os elementos verticalmente no mobile */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .contato-service-image {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .contato-service-content {
+    padding: 1rem; /* Reduz o padding interno */
+  }
+
+  .contato-service-title {
+    font-size: 1.25rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .contato-service-description {
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .contato-service-link {
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+  }
 }

@@ -14,14 +14,14 @@ const Contato = () => {
         <meta name="description" content="We Move Lives" />
       </Head>
       <Menu selected_item="contato" />
-      <div className="container">
-        <div className="content">
+      <div className="contato-container">
+        <div className="contato-content">
           {/* Hero Section */}
-          <section className="hero">
+          <section className="contato-hero">
             <Image
               src="/images/contato/contato.jpg"
               alt="Executive Mercedes"
-              className="hero-image"
+              className="contato-hero-image"
               width={6000}
               height={3000}
             />
