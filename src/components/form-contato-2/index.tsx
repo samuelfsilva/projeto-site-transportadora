@@ -1,10 +1,43 @@
+"use client";
 import "@/app/globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const FormContato2: React.FC = () => {
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Evita o redirecionamento padrão do formulário
+
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries()); // Converte os dados do formulário para um objeto
+
+    try {
+      const response = await fetch("/api/enviar-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatusMessage("Mensagem enviada com sucesso!");
+        event.currentTarget.reset(); // Limpa o formulário após o envio
+      } else {
+        const errorData = await response.json();
+        setStatusMessage(`Erro: ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error("Erro ao enviar o formulário:", error);
+      setStatusMessage(
+        "Erro ao enviar a mensagem. Tente novamente mais tarde."
+      );
+    }
+  };
+
   return (
     <>
       <section className="contact-section">
@@ -36,11 +69,7 @@ const FormContato2: React.FC = () => {
             Ou preencha nosso formulário e entraremos em contato o mais breve
             possível.
           </p>
-          <form
-            className="contact-form"
-            action="/api/enviar-email"
-            method="POST"
-          >
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Nome</label>
               <input
@@ -85,6 +114,9 @@ const FormContato2: React.FC = () => {
               Enviar
             </button>
           </form>
+          {statusMessage && (
+            <p className="status-message">{statusMessage}</p> // Exibe a mensagem de status
+          )}
         </div>
       </section>
     </>

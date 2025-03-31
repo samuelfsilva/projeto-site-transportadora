@@ -72,6 +72,21 @@
   background-color: #7e7239;
 }
 
+.status-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4b5563; /* Cor padrão */
+}
+
+.status-message.success {
+  color: #16a34a; /* Verde para sucesso */
+}
+
+.status-message.error {
+  color: #dc2626; /* Vermelho para erro */
+}
+
 /* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
   .contact-section {
