@@ -71,6 +71,15 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
+          <div className="footer-developer-mobile">
+            <p>Desenvolvido por </p>&nbsp;
+            <a
+              href="mailto:samuel.ferreira.ti@gmail.com"
+              className="footer-link"
+            >
+              Samuel Ferreira
+            </a>
+          </div>
         </div>
       </footer>
     </>
