@@ -279,3 +279,133 @@
   align-items: center;
   margin-bottom: 1rem;
 }
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Container principal */
+  .main-container {
+    padding: 1rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  /* Key Features Section */
+  .key-features {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .key-features-cards {
+    grid-template-columns: 1fr; /* Exibe os cartões em uma única coluna */
+    gap: 1rem;
+  }
+
+  .key-feature-card {
+    padding: 2rem 1rem;
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+  }
+
+  .key-feature-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .key-feature-title {
+    font-size: 1.25rem;
+  }
+
+  .key-feature-description {
+    font-size: 0.875rem;
+    width: 100%;
+  }
+
+  /* Request Quote Section */
+  .request-quote {
+    padding: 1rem 0;
+  }
+
+  .request-quote-button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: 1.5rem;
+  }
+
+  .services-section-cards {
+    grid-template-columns: 1fr; /* Exibe os cartões em uma única coluna */
+    gap: 1rem;
+  }
+
+  .service-card {
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    text-align: flex-start; /* Alinha o texto à esquerda */
+  }
+
+  .service-card.reverse {
+    flex-direction: column; /* Remove o estilo reverso */
+  }
+
+  .service-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-content {
+    padding: 1rem;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+  }
+
+  .service-description {
+    font-size: 0.875rem;
+  }
+
+  .service-link {
+    font-size: 0.875rem;
+  }
+
+  /* Tourist Section */
+  .tourist-section {
+    padding: 1.5rem;
+  }
+
+  .tourist-title {
+    font-size: 1.5rem;
+  }
+
+  .tourist-container {
+    flex-direction: column;
+  }
+
+  .tourist-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .tourist-overlay {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .tourist-description {
+    font-size: 1.25rem;
+  }
+
+  .tourist-subdescription {
+    font-size: 0.875rem;
+  }
+}
