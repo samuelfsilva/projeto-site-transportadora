@@ -9,7 +9,7 @@
 
 .section-description {
   margin-left: 80px;
-  margin-right: 80px; 
+  margin-right: 80px;
 }
 
 /* Seção de turismo */
@@ -27,95 +27,33 @@
   flex-direction: column;
 }
 
-/* Contêiner principal do carrossel */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Container principal */
+  .main-container {
+    padding: 1rem; /* Adiciona padding para melhorar o espaçamento interno */
+  }
+
+  /* Descrição da seção */
+  .section-description {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center; /* Centraliza o texto */
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+    line-height: 1.5; /* Melhora a legibilidade */
+  }
+
+  /* Seção de turismo */
+  .tourist-section {
+    padding-top: 1.5rem; /* Reduz o espaçamento superior */
+    margin-bottom: 1.5rem; /* Reduz o espaçamento inferior */
+  }
+
+  /* Contêiner centralizado da seção de turismo */
+  .tourist-container {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 1rem; /* Adiciona espaçamento entre os itens */
+  }
 }
 
-/* Botões de navegação do carrossel */
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 3;
-}
 
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-/* Slide do carrossel */
-.carousel-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-/* Contêiner interno do item do carrossel */
-.carousel-item-inner {
-  width: 100%;
-  position: relative;
-}
-
-/* Imagem do item do carrossel */
-.carousel-item-image {
-  width: 100%;
-  height: 540px;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  object-fit: cover;
-}
-
-/* Sobreposição no item do carrossel */
-.carousel-item-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 28%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  box-sizing: border-box;
-  z-index: 2;
-}
-
-/* Miniaturas */
-.carousel-thumbnails {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 10px;
-}
-
-.carousel-thumbnail {
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 0.5rem;
-  transition: border-color 0.3s;
-}
-
-.carousel-thumbnail.active {
-  border-color: #d97706; /* Cor de destaque para a miniatura ativa */
-}
-
-.carousel-thumbnail-image {
-  border-radius: 0.5rem;
-  object-fit: cover;
-}

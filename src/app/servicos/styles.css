@@ -145,3 +145,91 @@
 .request-quote-button:hover {
   background-color: #b45309;
 }
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Container principal */
+  .main-container {
+    padding: 1rem;
+  }
+
+  /* Seção de recursos principais */
+  .key-features {
+    display: flex; /* Altera para flexbox */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 1rem; /* Adiciona espaçamento entre os itens */
+    padding: 1.5rem 0;
+  }
+
+  .key-feature-item {
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem;
+  }
+
+  .key-feature-image img {
+    margin: 0 auto; /* Centraliza a imagem */
+    height: auto; /* Ajusta a altura automaticamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+  }
+
+  .key-feature-content {
+    padding: 1rem 0; /* Reduz o espaçamento interno */
+    align-items: center; /* Centraliza o conteúdo */
+  }
+
+  .key-feature-title {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+    text-align: center;
+  }
+
+  .key-feature-description {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    text-align: center;
+  }
+
+  /* Seção de serviços */
+  .service-section {
+    display: flex; /* Altera para flexbox */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 1rem; /* Adiciona espaçamento entre os itens */
+    padding: 1.5rem 0;
+  }
+
+  .service-item {
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem;
+  }
+
+  .service-section-image img {
+    margin: 0 auto; /* Centraliza a imagem */
+    height: auto; /* Ajusta a altura automaticamente */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+  }
+
+  .service-content {
+    padding: 1rem 0; /* Reduz o espaçamento interno */
+    align-items: center; /* Centraliza o conteúdo */
+  }
+
+  .service-title {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+    text-align: center;
+  }
+
+  .service-description {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    text-align: center;
+  }
+
+  /* Botão de solicitação de orçamento */
+  .request-quote {
+    padding: 1rem 0;
+  }
+
+  .request-quote-button {
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+    padding: 0.5rem 1.5rem; /* Ajusta o espaçamento interno */
+  }
+}
