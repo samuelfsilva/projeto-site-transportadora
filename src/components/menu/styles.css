@@ -39,9 +39,71 @@
   width: 220px;
 }
 
+/* Menu Desktop */
 .nav-tag {
   display: flex; /* Define o layout como flexbox */
   gap: 24px; /* Substitui space-x-6 (6 * 4px = 24px) */
+}
+
+/* Botão do menu hambúrguer (aparece apenas no mobile) */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Menu Mobile */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Posiciona o menu logo abaixo do cabeçalho */
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mobile-menu .menu-item {
+  padding: 10px 15px;
+  color: #98865e;
+  text-decoration: none;
+  font-weight: normal;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mobile-menu .menu-item:hover {
+  background-color: #f5f5f5;
+  color: #7e7239;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .header-tag {
+    flex-direction: row; /* Alinha os itens em coluna */
+    justify-content: flex-start;
+    gap: 4rem;
+    align-items: center; 
+    margin: 0 20px; /* Substitui mx-5 (5 * 4px = 20px) */
+  }
+
+  .nav-tag {
+    display: none; /* Esconde o menu desktop no mobile */
+  }
+
+  .hamburger-button {
+    display: block; /* Exibe o botão hambúrguer no mobile */
+  }
+
+  .mobile-menu {
+    position: relative;
+    top: 0px;
+    display: flex; /* Exibe o menu mobile */
+  }
 }
 
 .dropdown {

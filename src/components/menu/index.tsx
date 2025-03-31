@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 type SelectedItem =
@@ -11,10 +13,20 @@ type SelectedItem =
   | "contato";
 
 const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
       {/* Header */}
       <header className="header-tag">
+        {/* Botão do menu hambúrguer para mobile */}
+        <button className="hamburger-button" onClick={toggleMobileMenu}>
+          ☰
+        </button>
         <div className="logo-tag">
           <Link href="/">
             <Image
@@ -25,6 +37,8 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
             />
           </Link>
         </div>
+
+        {/* Menu Desktop */}
         <nav className="nav-tag">
           <Link
             href="/"
@@ -80,6 +94,56 @@ const Menu: React.FC<{ selected_item: SelectedItem }> = ({ selected_item }) => {
           </Link>
         </nav>
       </header>
+      {/* Menu Mobile */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu">
+          <Link
+            href="/"
+            className={`menu-item ${
+              selected_item === "inicio" ? "selected" : ""
+            }`}
+            onClick={toggleMobileMenu}
+          >
+            INÍCIO
+          </Link>
+          <Link
+            href="/servicos"
+            className={`menu-item ${
+              selected_item === "servicos" ? "selected" : ""
+            }`}
+            onClick={toggleMobileMenu}
+          >
+            SERVIÇOS
+          </Link>
+          <Link
+            href="/pontos-turisticos"
+            className={`menu-item ${
+              selected_item === "pontos-turisticos" ? "selected" : ""
+            }`}
+            onClick={toggleMobileMenu}
+          >
+            PONTOS TURÍSTICOS
+          </Link>
+          <Link
+            href="/sobre-nos"
+            className={`menu-item ${
+              selected_item === "sobre-nos" ? "selected" : ""
+            }`}
+            onClick={toggleMobileMenu}
+          >
+            SOBRE NÓS
+          </Link>
+          <Link
+            href="/contato"
+            className={`menu-item ${
+              selected_item === "contato" ? "selected" : ""
+            }`}
+            onClick={toggleMobileMenu}
+          >
+            CONTATO
+          </Link>
+        </div>
+      )}
     </>
   );
 };
