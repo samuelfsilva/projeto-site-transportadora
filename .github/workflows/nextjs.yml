@@ -24,11 +24,16 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_REPOSITORY_URL: ${{ vars.NEXT_PUBLIC_REPOSITORY_URL }}
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Environment Variables
+        run: |
+          echo "Phone Number: ${{ env.NEXT_PUBLIC_REPOSITORY_URL }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
