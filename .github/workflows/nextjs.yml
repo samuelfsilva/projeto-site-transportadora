@@ -85,24 +85,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      NEXT_PUBLIC_REPOSITORY_URL: ${{ vars.NEXT_PUBLIC_REPOSITORY_URL }}
-      EMAIL_USER: ${{ vars.EMAIL_USER }}
-      EMAIL_PASS: ${{ vars.EMAIL_PASS }}
-      EMAIL_SENDER: ${{ vars.EMAIL_SENDER }}
-      EMAIL_RECIPIENT: ${{ vars.EMAIL_RECIPIENT }}
-      EMAIL_SERVICE: ${{ vars.EMAIL_SERVICE }}
-      EMAIL_HOST: ${{ vars.EMAIL_HOST }}
-      EMAIL_PORT: ${{ vars.EMAIL_PORT }}
-      EMAIL_SECURE: ${{ vars.EMAIL_SECURE }}
-      GOOGLE_CLIENT_ID: ${{ vars.GOOGLE_CLIENT_ID }}
-      GOOGLE_CLIENT_SECRET: ${{ vars.GOOGLE_CLIENT_SECRET }}
-      GOOGLE_REDIRECT_URI: ${{ vars.GOOGLE_REDIRECT_URI }}
-      GOOGLE_REFRESH_TOKEN: ${{ vars.GOOGLE_REFRESH_TOKEN }}
-      NEXT_PUBLIC_PHONE_NUMBER: ${{ vars.NEXT_PUBLIC_PHONE_NUMBER }}
-      NEXT_PUBLIC_PHONE_NUMBER_LINK: ${{ vars.NEXT_PUBLIC_PHONE_NUMBER_LINK }}
-      NEXT_PUBLIC_EMAIL_ADDRESS: ${{ vars.NEXT_PUBLIC_EMAIL_ADDRESS }}
-      NEXT_PUBLIC_DEVELOPER_NAME: ${{ vars.NEXT_PUBLIC_DEVELOPER_NAME }}
-      NEXT_PUBLIC_DEVELOPER_EMAIL_ADDRESS: ${{ vars.NEXT_PUBLIC_DEVELOPER_EMAIL_ADDRESS }}
     runs-on: ubuntu-latest
     needs: build
     steps:
