@@ -90,7 +90,7 @@ jobs:
     steps:
       - name: Print Environment Variables
         run: |
-          echo "Phone Number: ${{ env.NEXT_PUBLIC_REPOSITORY_URL }}"
+          echo "ENV: ${{ env }}"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
