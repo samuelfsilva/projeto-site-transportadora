@@ -68,8 +68,6 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-      - name: Variável de ambiente
-        uses: echo "${{ vars.NEXT_PUBLIC_REPOSITORY_URL }}"
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -101,6 +99,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: VARS
+        uses: echo "${{ vars.NEXT_PUBLIC_REPOSITORY_URL }}"
 
   # Deployment job
   deploy:
