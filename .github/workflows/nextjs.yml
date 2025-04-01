@@ -33,7 +33,7 @@ jobs:
     steps:
       - name: Print Environment Variables
         run: |
-          echo "Phone Number: ${{ env.NEXT_PUBLIC_REPOSITORY_URL }}"
+          echo "NEXT_PUBLIC_REPOSITORY_URL: ${{ env.NEXT_PUBLIC_REPOSITORY_URL }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
