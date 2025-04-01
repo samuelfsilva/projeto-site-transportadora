@@ -3,6 +3,13 @@ import Link from "next/link";
 import React from "react";
 import "./styles.css";
 
+const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || "";
+const phoneNumberLink = process.env.NEXT_PUBLIC_PHONE_NUMBER_LINK || "";
+const emailAddress = process.env.NEXT_PUBLIC_EMAIL_ADDRESS || "";
+const developerName = process.env.NEXT_PUBLIC_DEVELOPER_NAME || "";
+const developerEmailAddress =
+  process.env.NEXT_PUBLIC_DEVELOPER_EMAIL_ADDRESS || "";
+
 const Footer: React.FC = () => {
   return (
     <>
@@ -41,10 +48,10 @@ const Footer: React.FC = () => {
             <div className="footer-developer">
               <p>Desenvolvido por </p>&nbsp;
               <a
-                href="mailto:samuel.ferreira.ti@gmail.com"
+                href={`mailto:${developerEmailAddress}`}
                 className="footer-link"
               >
-                Samuel Ferreira
+                {developerName}
               </a>
             </div>
           </div>
@@ -53,31 +60,25 @@ const Footer: React.FC = () => {
             <p>
               Telefone: &nbsp;
               <a
-                href="https://wa.me/5521965808417"
+                href={`https://wa.me/${phoneNumberLink}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-link"
               >
-                (21) 96580-8417
+                {phoneNumber}
               </a>
             </p>
             <div className="footer-email">
               <p>E-mail: </p>&nbsp;
-              <a
-                href="mailto:valdecir.paiva310@gmail.com"
-                className="footer-link"
-              >
-                valdecir.paiva310@gmail.com
+              <a href={`mailto:${emailAddress}`} className="footer-link">
+                {emailAddress}
               </a>
             </div>
           </div>
           <div className="footer-developer-mobile">
             <p>Desenvolvido por </p>&nbsp;
-            <a
-              href="mailto:samuel.ferreira.ti@gmail.com"
-              className="footer-link"
-            >
-              Samuel Ferreira
+            <a href={`mailto:${developerEmailAddress}`} className="footer-link">
+              {developerName}
             </a>
           </div>
         </div>
