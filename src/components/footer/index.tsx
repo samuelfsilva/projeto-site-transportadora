@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 import "./styles.css";
 
+const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL || "";
+
 const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || "";
 const phoneNumberLink = process.env.NEXT_PUBLIC_PHONE_NUMBER_LINK || "";
 const emailAddress = process.env.NEXT_PUBLIC_EMAIL_ADDRESS || "";
@@ -19,7 +21,7 @@ const Footer: React.FC = () => {
           <div className="footer-logo">
             <Link href="/">
               <Image
-                src="/images/logo.svg"
+                src={`${repositoryUrl}/images/logo.svg`}
                 alt="Valdecir Transportes"
                 width={100}
                 height={50}

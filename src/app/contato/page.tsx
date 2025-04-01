@@ -6,6 +6,8 @@ import Head from "next/head";
 import Image from "next/image";
 import "./styles.css";
 
+const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL || "";
+
 const Contato = () => {
   return (
     <>
@@ -19,7 +21,7 @@ const Contato = () => {
           {/* Hero Section */}
           <section className="contato-hero">
             <Image
-              src="/images/contato/contato.jpg"
+              src={`${repositoryUrl}/images/contato/contato.jpg`}
               alt="Executive Mercedes"
               className="contato-hero-image"
               width={6000}

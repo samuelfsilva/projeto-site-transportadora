@@ -5,6 +5,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import "./styles.css";
 
+const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL || "";
+
 const FormContato2: React.FC = () => {
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
@@ -15,7 +17,7 @@ const FormContato2: React.FC = () => {
     const data = Object.fromEntries(formData.entries()); // Converte os dados do formulário para um objeto
 
     try {
-      const response = await fetch("/api/enviar-email", {
+      const response = await fetch(`${repositoryUrl}/api/enviar-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +59,7 @@ const FormContato2: React.FC = () => {
               className="whatsapp-link"
             >
               <Image
-                src="/images/contato/whatsapp.png"
+                src={`${repositoryUrl}/images/contato/whatsapp.png`}
                 alt="WhatsApp"
                 className="whatsapp-icon"
                 width={400}
