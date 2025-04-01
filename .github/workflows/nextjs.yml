@@ -68,8 +68,8 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
-        env:
-          NEXT_PUBLIC_DEVELOPER_NAME: SAMUEL
+      - name: Variável de ambiente
+        uses: echo "${{ vars.NEXT_PUBLIC_REPOSITORY_URL }}"
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
