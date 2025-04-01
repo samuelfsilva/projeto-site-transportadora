@@ -24,6 +24,26 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  EMAIL_USER: ${{ env.EMAIL_USER }}
+  EMAIL_PASS: ${{ env.EMAIL_PASS }}
+  EMAIL_SENDER: ${{ env.EMAIL_SENDER }}
+  EMAIL_RECIPIENT: ${{ env.EMAIL_RECIPIENT }}
+  EMAIL_SERVICE: ${{ env.EMAIL_SERVICE }}
+  EMAIL_HOST: ${{ env.EMAIL_HOST }}
+  EMAIL_PORT: ${{ env.EMAIL_PORT }}
+  EMAIL_SECURE: ${{ env.EMAIL_SECURE }}
+  GOOGLE_CLIENT_ID: ${{ env.GOOGLE_CLIENT_ID }}
+  GOOGLE_CLIENT_SECRET: ${{ env.GOOGLE_CLIENT_SECRET }}
+  GOOGLE_REDIRECT_URI: ${{ env.GOOGLE_REDIRECT_URI }}
+  GOOGLE_REFRESH_TOKEN: ${{ env.GOOGLE_REFRESH_TOKEN }}
+  NEXT_PUBLIC_PHONE_NUMBER: ${{ env.NEXT_PUBLIC_PHONE_NUMBER }}
+  NEXT_PUBLIC_PHONE_NUMBER_LINK: ${{ env.NEXT_PUBLIC_PHONE_NUMBER_LINK }}
+  NEXT_PUBLIC_EMAIL_ADDRESS: ${{ env.NEXT_PUBLIC_EMAIL_ADDRESS }}
+  NEXT_PUBLIC_DEVELOPER_NAME: ${{ env.NEXT_PUBLIC_DEVELOPER_NAME }}
+  NEXT_PUBLIC_DEVELOPER_EMAIL_ADDRESS: ${{ env.NEXT_PUBLIC_DEVELOPER_EMAIL_ADDRESS }}
+  NEXT_PUBLIC_REPOSITORY_URL: ${{ env.NEXT_PUBLIC_REPOSITORY_URL }}
+
 jobs:
   # Build job
   build:
@@ -88,9 +108,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Print Environment Variables
-        run: |
-          echo "ENV: ${{ env }}"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
