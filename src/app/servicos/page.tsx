@@ -5,8 +5,6 @@ import Head from "next/head";
 import Image from "next/image";
 import "./styles.css";
 
-const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL || "";
-
 const Servicos = () => {
   return (
     <>
@@ -20,28 +18,28 @@ const Servicos = () => {
         <section className="service-section">
           {[
             {
-              src: `${repositoryUrl}/images/servicos/condutor-09.png`,
+              src: "/images/servicos/condutor-09.png",
               alt: "Translados",
               title: "Translados",
               description:
                 "Translados disponíveis para aeroportos (Santos Dumont e Galeão), hotéis e eventos corporativos. Serviço eficiente e pontual.",
             },
             {
-              src: `${repositoryUrl}/images/servicos/veiculo-06.png`,
+              src: "/images/servicos/veiculo-06.png",
               alt: "Passeios Turísticos Privativos",
               title: "Passeios Turísticos Privativos",
               description:
                 "Roteiros flexíveis nos principais pontos turísticos do Rio de Janeiro.",
             },
             {
-              src: `${repositoryUrl}/images/servicos/passageiro-01.png`,
+              src: "/images/servicos/passageiro-01.png",
               alt: "Serviços Corporativos",
               title: "Serviços Corporativos",
               description:
                 "Transporte para reuniões, conferências ou eventos empresariais.",
             },
             {
-              src: `${repositoryUrl}/images/servicos/veiculo-07.png`,
+              src: "/images/servicos/veiculo-07.png",
               alt: "Viagens de Curta ou Longa Distância",
               title: "Viagens de Curta ou Longa Distância",
               description:

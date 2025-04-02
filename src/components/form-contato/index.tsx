@@ -3,8 +3,6 @@ import "@/app/globals.css";
 import React, { useState } from "react";
 import "./styles.css";
 
-const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL || "";
-
 const FormContato: React.FC = () => {
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
@@ -15,7 +13,7 @@ const FormContato: React.FC = () => {
     const data = Object.fromEntries(formData.entries()); // Converte os dados do formulário para um objeto
 
     try {
-      const response = await fetch(`${repositoryUrl}/api/enviar-email`, {
+      const response = await fetch("/api/enviar-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

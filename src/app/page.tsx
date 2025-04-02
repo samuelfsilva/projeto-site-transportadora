@@ -7,8 +7,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import "./styles.css";
 
-const repositoryUrl = process.env.NEXT_PUBLIC_REPOSITORY_URL || "";
-
 const Main = () => {
   const router = useRouter();
   return (
@@ -23,7 +21,7 @@ const Main = () => {
           {/* Hero Section with Car */}
           <section className="hero-section">
             <Image
-              src={`${repositoryUrl}/images/veiculo-01.png`}
+              src={"/images/veiculo-01.png"}
               alt="Executive Mercedes"
               className="hero-image"
               width={800}
@@ -45,7 +43,7 @@ const Main = () => {
                 {
                   icon: (
                     <img
-                      src={`${repositoryUrl}/images/icon-clock.svg`}
+                      src={"/images/icon-clock.svg"}
                       className="key-feature-icon"
                     />
                   ),
@@ -56,7 +54,7 @@ const Main = () => {
                 {
                   icon: (
                     <img
-                      src={`${repositoryUrl}/images/icon-favorite.svg`}
+                      src={"/images/icon-favorite.svg"}
                       className="key-feature-icon"
                     />
                   ),
@@ -67,7 +65,7 @@ const Main = () => {
                 {
                   icon: (
                     <img
-                      src={`${repositoryUrl}/images/icon-support.svg`}
+                      src={"/images/icon-support.svg"}
                       className="key-feature-icon"
                     />
                   ),
@@ -106,19 +104,19 @@ const Main = () => {
             <div className="services-section-cards">
               {[
                 {
-                  image: `${repositoryUrl}/images/servico-01.png`,
+                  image: "/images/servico-01.png",
                   title: "Motoristas Treinados",
                   description:
                     "Profissionais experientes, bilíngues (se aplicável) com foco no atendimento ao cliente.",
                 },
                 {
-                  image: `${repositoryUrl}/images/servico-02.png`,
+                  image: "/images/servico-02.png",
                   title: "Veículo Privativo",
                   description:
                     "Ideal para quem busca discrição, conforto exclusivo durante viagens ou compromissos.",
                 },
                 {
-                  image: `${repositoryUrl}/images/servico-03.png`,
+                  image: "/images/servico-03.png",
                   title: "Atendimento 24/7",
                   description:
                     "Flexibilidade para atender em qualquer momento, garantindo comodidade total.",
@@ -153,7 +151,7 @@ const Main = () => {
             <div className="tourist-container">
               <div className="tourist-inner">
                 <Image
-                  src={`${repositoryUrl}/images/pontos-turisticos/arcos-lapa.jpeg`}
+                  src="/images/pontos-turisticos/arcos-lapa.jpeg"
                   alt="Arcos da Lapa"
                   className="tourist-image"
                   width={500}
